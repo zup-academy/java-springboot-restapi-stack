@@ -7,7 +7,9 @@ compatibility: # Put a list of technologies compatible with the stack
   - java
   - spring
 technologies: # Ref: https://docs.stackspot.com/latest/docs/creators-guide/yaml/#technologies 
-  - docker 
+  - docker
+  - rest
+  - springboot 
 about: docs/about.md
 use-cases:
   - title: Use Case Title

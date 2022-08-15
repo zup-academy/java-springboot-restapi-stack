@@ -1,13 +1,13 @@
-package com.stackspot.restapi;
+package {{computed_inputs.project_base_package}};
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class RestapiApplication {
+public class Application {
 
 	public static void main(String[] args) {
-		SpringApplication.run(RestapiApplication.class, args);
+		SpringApplication.run(Application.class, args);
 	}
 
 }

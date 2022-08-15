@@ -1,0 +1,29 @@
+##
+# Server
+##
+server:
+    error:
+        include-message: always
+        include-exception: false
+        include-stacktrace: on_param
+        include-binding-errors: always
+    port: 8080
+    servlet:
+        context-path: /
+
+##
+# Spring Application
+##
+spring:
+    output:
+        ansi:
+            enabled: ALWAYS
+
+##
+# Spring Actuator
+# https://docs.spring.io/spring-boot/docs/current/reference/html/actuator.html#actuator.endpoints
+##
+management:
+  endpoint:
+      health:
+        show-details: always
