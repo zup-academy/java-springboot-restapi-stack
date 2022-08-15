@@ -24,7 +24,8 @@ public class NewAuthorController {
             "A new author has been created = {}", author
         );
 
-        // Tip: Execute your business logic here, like persisting this entity or sending an event
+        // Tip: Execute your business logic here, right after validating your request's payload,
+        // like persisting this entity into database or sending an event to a broker
         persist(author);
 
         URI location = uriBuidler.path("/api/v1/authors/{id}")
@@ -37,6 +38,8 @@ public class NewAuthorController {
     }
 
     private void persist(Author author) {
-        LOGGER.info("Persisting a new author...");
+        LOGGER.info(
+            "Persisting a new author into database..."
+        );
     }
 }

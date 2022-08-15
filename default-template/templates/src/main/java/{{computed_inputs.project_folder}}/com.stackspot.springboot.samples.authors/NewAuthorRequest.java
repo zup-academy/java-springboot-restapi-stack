@@ -52,7 +52,7 @@ public class NewAuthorRequest {
     }
 
     /**
-     * Verifies whether this author is under age or not
+     * Verifies whether this author is underage or not
      */
     private boolean isUnderAge() {
         LocalDate today = LocalDate.now();
@@ -61,7 +61,10 @@ public class NewAuthorRequest {
     }
 
     /**
-     * Converts this DTO to an entity or domain object
+     * Converts this DTO to an entity or domain object.
+     *
+     * Tip:
+     *  As you can see, we do NOT need any object mapper to do this kind of thing
      */
     public Author toModel() {
 
