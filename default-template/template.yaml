@@ -6,4 +6,26 @@ inputs:
   - label: Project name
     type: text
     name: project_name
-    default: project-name
+    default: springboot-restapi-app
+  - label: Project description
+    type: text
+    name: project_description
+    default: Simpe REST API application with Java and Spring Boot
+  - label: Spring Boot version
+    type: text
+    name: project_springboot_version
+    default: 2.7.2
+  - label: Project groupId
+    type: text
+    name: project_group_id
+  - label: Project artifactId
+    type: text
+    name: project_artifact_id
+  - label: Project version
+    type: text
+    name: project_version
+    default: 0.0.1-SNAPSHOT
+
+computedInputs:
+  "project_base_package": "{{project_group_id}}.{{project_artifact_id}}"
+  "project_folder": "{{computed_inputs.project_base_package | replace('.', '/')}}"

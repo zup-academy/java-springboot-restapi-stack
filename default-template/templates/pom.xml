@@ -6,15 +6,15 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.7.2</version>
+		<version>{{inputs.project_springboot_version}}</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 
-	<groupId>com.stackspot</groupId>
-	<artifactId>restapi</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
-	<name>restapi</name>
-	<description>Stack for bulding REST API applications with Java and Spring Boot</description>
+	<groupId>{{inputs.project_group_id}}</groupId>
+	<artifactId>{{inputs.project_artifact_id}}</artifactId>
+	<version>{{inputs.project_version}}</version>
+	<name>{{inputs.project_name}}</name>
+	<description>{{inputs.project_description}}</description>
 	
 	<properties>
 		<java.version>17</java.version>
