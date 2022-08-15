@@ -1,5 +1,9 @@
 ##
 # Server
+# https://docs.spring.io/spring-boot/docs/current/reference/html/application-properties.html#appendix.application-properties.server
+# https://github.com/spring-projects/spring-restdocs/issues/710
+# https://www.baeldung.com/exception-handling-for-rest-with-spring#spring-boot
+# https://reflectoring.io/spring-boot-exception-handling/
 ##
 server:
     error:
