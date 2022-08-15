@@ -1,0 +1,9 @@
+name: default-template
+description: Default template to build REST API applications with Java and Spring Boot. Its main Spring Boot's modules are: Spring Web, Validation and Spring Actuator.
+types:
+  - app-template
+inputs:
+  - label: Project name
+    type: text
+    name: project_name
+    default: project-name
