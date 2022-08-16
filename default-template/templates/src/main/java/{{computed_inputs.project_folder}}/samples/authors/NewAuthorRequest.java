@@ -1,6 +1,5 @@
-package com.stackspot.springboot.samples.authors;
+package br.com.zup.edu.app2.samples;
 
-import org.springframework.http.HttpStatus;
 import org.springframework.web.server.ResponseStatusException;
 
 import javax.validation.constraints.*;
@@ -61,16 +60,13 @@ public class NewAuthorRequest {
     }
 
     /**
-     * Converts this DTO to an entity or domain object.
-     *
-     * Tip:
-     *  As you can see, we do NOT need any object mapper to do this kind of thing
+     * Converts this DTO to an entity or domain object
      */
     public Author toModel() {
 
         // Tip: Yeah, we CAN have business logic inside DTOs like this one ;-)
         if (isUnderAge()) {
-            throw new ResponseStatusException(BAD_REQUEST, "author is under age");
+            throw new ResponseStatusException(BAD_REQUEST, "author is underage");
         }
 
         return new Author(name, email, birthdate);

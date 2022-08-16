@@ -1,4 +1,4 @@
-package com.stackspot.springboot.samples.authors;
+package br.com.zup.edu.app2.samples;
 
 import javax.validation.constraints.*;
 import java.time.LocalDate;
@@ -35,6 +35,7 @@ public class Author {
         this.name = name;
         this.email = email;
         this.birthdate = birthdate;
+        // TODO: asserts
     }
 
     public UUID getId() {
