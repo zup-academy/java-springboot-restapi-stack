@@ -1,6 +1,5 @@
-package br.com.zup.edu.app2.samples;
+package {{computed_inputs.project_base_package}}.samples.authors;
 
-import br.com.zup.edu.app2.Application;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
@@ -19,7 +18,7 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
-@SpringBootTest(classes = Application.class)
+@SpringBootTest
 @ActiveProfiles("test")
 @AutoConfigureMockMvc(printOnlyOnFailure = false)
 class ListAuthorsControllerTest {

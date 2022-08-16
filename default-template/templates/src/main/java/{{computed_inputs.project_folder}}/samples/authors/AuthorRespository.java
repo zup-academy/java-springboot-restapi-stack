@@ -1,4 +1,4 @@
-package br.com.zup.edu.app2.samples;
+package {{computed_inputs.project_base_package}}.samples.authors;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

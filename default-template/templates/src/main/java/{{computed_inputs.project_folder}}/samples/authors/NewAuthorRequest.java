@@ -1,4 +1,4 @@
-package br.com.zup.edu.app2.samples;
+package {{computed_inputs.project_base_package}}.samples.authors;
 
 import org.springframework.web.server.ResponseStatusException;
 

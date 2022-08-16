@@ -1,6 +1,5 @@
-package br.com.zup.edu.app2.samples;
+package {{computed_inputs.project_base_package}}.samples.authors;
 
-import br.com.zup.edu.app2.Application;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.BeforeEach;
@@ -20,7 +19,7 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.redirectedUrlPattern;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
-@SpringBootTest(classes = Application.class)
+@SpringBootTest
 @ActiveProfiles("test")
 @AutoConfigureMockMvc(printOnlyOnFailure = false)
 class NewAuthorControllerTest {
@@ -105,7 +104,7 @@ class NewAuthorControllerTest {
     }
 
     @Test
-    @DisplayName("should not create a new author when he is underage")
+    @DisplayName("should not create a new author when he/she is underage")
     public void t4() throws Exception {
         // scenario
         NewAuthorRequest request = new NewAuthorRequest(

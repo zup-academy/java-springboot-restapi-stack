@@ -1,4 +1,4 @@
-package br.com.zup.edu.app2.samples;
+package {{computed_inputs.project_base_package}}.samples.authors;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
