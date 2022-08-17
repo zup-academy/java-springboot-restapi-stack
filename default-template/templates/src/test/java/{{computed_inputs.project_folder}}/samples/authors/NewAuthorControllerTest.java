@@ -12,12 +12,13 @@ import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.web.servlet.MockMvc;
 
 import java.time.LocalDate;
+import java.util.Map;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.hamcrest.Matchers.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.springframework.http.MediaType.APPLICATION_JSON;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.redirectedUrlPattern;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
 @SpringBootTest
 @ActiveProfiles("test")
@@ -54,7 +55,8 @@ class NewAuthorControllerTest {
         // action (and validation)
         mockMvc.perform(post("/api/v1/authors")
                         .contentType(APPLICATION_JSON)
-                        .content(toJson(request)))
+                        .content(toJson(request))
+                        .header("Accept-Language", "en"))
                 .andExpect(status().isCreated())
                 .andExpect(redirectedUrlPattern("**/api/v1/authors/*"))
         ;
@@ -73,13 +75,24 @@ class NewAuthorControllerTest {
         // action (and validation)
         mockMvc.perform(post("/api/v1/authors")
                         .contentType(APPLICATION_JSON)
-                        .content(toJson(request)))
+                        .content(toJson(request))
+                        .header("Accept-Language", "en"))
                 .andExpect(status().isBadRequest())
+                .andExpect(header().string("Content-Type", is("application/problem+json")))
+                .andExpect(jsonPath("$.type", is("https://zalando.github.io/problem/constraint-violation")))
+                .andExpect(jsonPath("$.title", is("Constraint Violation")))
+                .andExpect(jsonPath("$.status", is(400)))
+                .andExpect(jsonPath("$.violations", hasSize(3)))
+                .andExpect(jsonPath("$.violations", containsInAnyOrder(
+                                violation("name", "must not be empty"),
+                                violation("email", "must not be empty"),
+                                violation("birthdate", "must not be null")
+                        )
+                ))
         ;
 
         // validation
         assertEquals(0, repository.count());
-        // TODO: assert message errors
     }
 
     @Test
@@ -94,13 +107,25 @@ class NewAuthorControllerTest {
         // action (and validation)
         mockMvc.perform(post("/api/v1/authors")
                         .contentType(APPLICATION_JSON)
-                        .content(toJson(request)))
+                        .content(toJson(request))
+                        .header("Accept-Language", "en"))
                 .andExpect(status().isBadRequest())
+                .andExpect(header().string("Content-Type", is("application/problem+json")))
+                .andExpect(jsonPath("$.type", is("https://zalando.github.io/problem/constraint-violation")))
+                .andExpect(jsonPath("$.title", is("Constraint Violation")))
+                .andExpect(jsonPath("$.status", is(400)))
+                .andExpect(jsonPath("$.violations", hasSize(4)))
+                .andExpect(jsonPath("$.violations", containsInAnyOrder(
+                                violation("name", "size must be between 0 and 120"),
+                                violation("email", "size must be between 0 and 60"),
+                                violation("email", "must be a well-formed email address"),
+                                violation("birthdate", "must be a past date")
+                        )
+                ))
         ;
 
         // validation
         assertEquals(0, repository.count());
-        // TODO: assert message errors
     }
 
     @Test
@@ -115,13 +140,25 @@ class NewAuthorControllerTest {
         // action (and validation)
         mockMvc.perform(post("/api/v1/authors")
                         .contentType(APPLICATION_JSON)
-                        .content(toJson(request)))
+                        .content(toJson(request))
+                        .header("Accept-Language", "en"))
                 .andExpect(status().isBadRequest())
-                .andExpect(status().reason("author is underage"))
+                .andExpect(header().string("Content-Type", is("application/problem+json")))
+                .andExpect(jsonPath("$.title", is("Bad Request")))
+                .andExpect(jsonPath("$.status", is(400)))
+                .andExpect(jsonPath("$.detail", containsString("author is underage")))
         ;
 
         // validation
         assertEquals(0, repository.count());
+    }
+
+
+    private Map<String, Object> violation(String field, String message) {
+        return Map.of(
+            "field", field,
+            "message", message
+        );
     }
 
     private String toJson(Object payload) throws JsonProcessingException {
