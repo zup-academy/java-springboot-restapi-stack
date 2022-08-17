@@ -1,4 +1,4 @@
-package br.com.zup.edu.app5;
+package {{computed_inputs.project_base_package}};
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
