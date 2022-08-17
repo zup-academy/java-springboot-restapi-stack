@@ -10,6 +10,7 @@ import java.net.URI;
 
 /**
  * Prints a better detail message
+ * TODO: https://github.com/zalando/problem-spring-web#stack-traces-and-causal-chains
  */
 @ControllerAdvice
 public class ResponseStatusExceptionHandler implements ProblemHandling {
@@ -23,5 +24,5 @@ public class ResponseStatusExceptionHandler implements ProblemHandling {
         }
         return builder;
     }
-    
+
 }
