@@ -1,4 +1,4 @@
-package {{computed_inputs.project_base_package}}.samples.authors;
+package br.com.zup.edu.app5.samples.authors;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -8,8 +8,10 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.http.HttpHeaders;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.web.servlet.MockMvc;
+import org.zalando.problem.spring.common.MediaTypes;
 
 import java.time.LocalDate;
 import java.util.Map;
@@ -56,7 +58,7 @@ class NewAuthorControllerTest {
         mockMvc.perform(post("/api/v1/authors")
                         .contentType(APPLICATION_JSON)
                         .content(toJson(request))
-                        .header("Accept-Language", "en"))
+                        .header(HttpHeaders.ACCEPT_LANGUAGE, "en"))
                 .andExpect(status().isCreated())
                 .andExpect(redirectedUrlPattern("**/api/v1/authors/*"))
         ;
@@ -76,9 +78,9 @@ class NewAuthorControllerTest {
         mockMvc.perform(post("/api/v1/authors")
                         .contentType(APPLICATION_JSON)
                         .content(toJson(request))
-                        .header("Accept-Language", "en"))
+                        .header(HttpHeaders.ACCEPT_LANGUAGE, "en"))
                 .andExpect(status().isBadRequest())
-                .andExpect(header().string("Content-Type", is("application/problem+json")))
+                .andExpect(header().string(HttpHeaders.CONTENT_TYPE, is(MediaTypes.PROBLEM_VALUE)))
                 .andExpect(jsonPath("$.type", is("https://zalando.github.io/problem/constraint-violation")))
                 .andExpect(jsonPath("$.title", is("Constraint Violation")))
                 .andExpect(jsonPath("$.status", is(400)))
@@ -108,9 +110,9 @@ class NewAuthorControllerTest {
         mockMvc.perform(post("/api/v1/authors")
                         .contentType(APPLICATION_JSON)
                         .content(toJson(request))
-                        .header("Accept-Language", "en"))
+                        .header(HttpHeaders.ACCEPT_LANGUAGE, "en"))
                 .andExpect(status().isBadRequest())
-                .andExpect(header().string("Content-Type", is("application/problem+json")))
+                .andExpect(header().string(HttpHeaders.CONTENT_TYPE, is(MediaTypes.PROBLEM_VALUE)))
                 .andExpect(jsonPath("$.type", is("https://zalando.github.io/problem/constraint-violation")))
                 .andExpect(jsonPath("$.title", is("Constraint Violation")))
                 .andExpect(jsonPath("$.status", is(400)))
@@ -141,9 +143,9 @@ class NewAuthorControllerTest {
         mockMvc.perform(post("/api/v1/authors")
                         .contentType(APPLICATION_JSON)
                         .content(toJson(request))
-                        .header("Accept-Language", "en"))
+                        .header(HttpHeaders.ACCEPT_LANGUAGE, "en"))
                 .andExpect(status().isBadRequest())
-                .andExpect(header().string("Content-Type", is("application/problem+json")))
+                .andExpect(header().string(HttpHeaders.CONTENT_TYPE, is(MediaTypes.PROBLEM_VALUE)))
                 .andExpect(jsonPath("$.title", is("Bad Request")))
                 .andExpect(jsonPath("$.status", is(400)))
                 .andExpect(jsonPath("$.detail", containsString("author is underage")))

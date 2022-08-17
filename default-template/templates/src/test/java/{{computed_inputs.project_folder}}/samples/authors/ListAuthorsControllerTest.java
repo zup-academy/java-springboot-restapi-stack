@@ -1,4 +1,4 @@
-package {{computed_inputs.project_base_package}}.samples.authors;
+package br.com.zup.edu.app5.samples.authors;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.BeforeEach;
@@ -7,6 +7,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.http.HttpHeaders;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.web.servlet.MockMvc;
 
@@ -53,7 +54,8 @@ class ListAuthorsControllerTest {
         });
 
         // action and validation
-        mockMvc.perform(get("/api/v1/authors"))
+        mockMvc.perform(get("/api/v1/authors")
+                        .header(HttpHeaders.ACCEPT_LANGUAGE, "en"))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$", hasSize(3)))
                 .andExpect(jsonPath("$[0].id").isNotEmpty())
@@ -72,7 +74,8 @@ class ListAuthorsControllerTest {
     @DisplayName("should not list all when there is no authors")
     public void t2() throws Exception {
         // action
-        mockMvc.perform(get("/api/v1/authors"))
+        mockMvc.perform(get("/api/v1/authors")
+                        .header(HttpHeaders.ACCEPT_LANGUAGE, "en"))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$").isEmpty())
         ;
