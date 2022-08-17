@@ -1,4 +1,4 @@
-package br.com.zup.edu.app5.samples.authors;
+package {{computed_inputs.project_base_package}}.samples.authors;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.BeforeEach;
