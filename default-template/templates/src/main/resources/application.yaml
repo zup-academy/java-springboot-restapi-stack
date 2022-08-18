@@ -48,3 +48,10 @@ management:
         health:
             show-details: always
             show-components: always
+            ##
+            # Kubernetes Probes
+            # https://docs.spring.io/spring-boot/docs/current/reference/html/actuator.html#actuator.endpoints.kubernetes-probes
+            ##
+            probes:
+                enabled: true
+                add-additional-paths: true
