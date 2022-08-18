@@ -9,8 +9,8 @@ server:
     error:
         include-message: always
         include-binding-errors: always
-        include-exception: false
         include-stacktrace: on_param
+        include-exception: false
     port: 8080
     servlet:
         context-path: /
@@ -37,6 +37,14 @@ spring:
 # https://docs.spring.io/spring-boot/docs/current/reference/html/actuator.html#actuator.endpoints
 ##
 management:
-  endpoint:
-      health:
-        show-details: always
+    endpoints:
+        jmx:
+            exposure:
+                include: "*"
+        web:
+            exposure:
+                include: health
+    endpoint:
+        health:
+            show-details: always
+            show-components: always
