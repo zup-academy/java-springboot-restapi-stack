@@ -66,7 +66,7 @@ public class NewAuthorRequest {
 
         // Tip: Yeah, we CAN have business logic inside DTOs like this one ;-)
         if (isUnderAge()) {
-            throw new ResponseStatusException(BAD_REQUEST, "author is underage");
+            throw new ResponseStatusException(UNPROCESSABLE_ENTITY, "author is underage");
         }
 
         return new Author(name, email, birthdate);

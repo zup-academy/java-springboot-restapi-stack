@@ -1,5 +1,12 @@
 package {{computed_inputs.project_base_package}}.samples.authors;
 
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.headers.Header;
+import io.swagger.v3.oas.annotations.media.Content;
+import io.swagger.v3.oas.annotations.media.ExampleObject;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.ResponseEntity;
@@ -22,6 +29,63 @@ public class NewAuthorController {
         this.respository = respository;
     }
 
+    @Operation(summary = "Create a new author")
+    @ApiResponses({
+            @ApiResponse(
+                    responseCode = "201",
+                    description = "Author created",
+                    headers = @Header(
+                            name = "Location",
+                            description = "URI of the author created",
+                            schema = @Schema(type = "string")
+                    ),
+                    content = @Content(
+                            mediaType = "application/json",
+                            schema = @Schema(implementation = Void.class)
+                    )
+            ),
+            @ApiResponse(
+                    responseCode = "400",
+                    description = "Invalid parameters",
+                    content = @Content(
+                            mediaType = "application/problem+json",
+                            schema = @Schema(ref = "https://opensource.zalando.com/restful-api-guidelines/models/problem-1.0.1.yaml#/Problem"),
+                            examples = @ExampleObject(
+                                    """
+                                        {
+                                           "status" : 400,
+                                           "title" : "Constraint Violation",
+                                           "type" : "https://zalando.github.io/problem/constraint-violation",
+                                           "violations" : [{
+                                             "field" : "birthdate",
+                                             "message" : "must be a past date"
+                                           }, {
+                                             "field" : "email",
+                                             "message" : "must be a well-formed email address"
+                                           } ]
+                                         }
+                                    """
+                            )
+                    )
+            ),
+            @ApiResponse(
+                    responseCode = "422",
+                    description = "Author is underage",
+                    content = @Content(
+                            mediaType = "application/problem+json",
+                            schema = @Schema(ref = "https://opensource.zalando.com/restful-api-guidelines/models/problem-1.0.1.yaml#/Problem"),
+                            examples = @ExampleObject(
+                                    """
+                                        {
+                                          "status" : 422,
+                                          "title" : "Unprocessable Entity",
+                                          "detail" : "author is underage"
+                                        }
+                                    """
+                            )
+                    )
+            )
+    })
     @PostMapping("/api/v1/authors")
     public ResponseEntity<?> create(@RequestBody @Valid NewAuthorRequest request, UriComponentsBuilder uriBuidler) {
 

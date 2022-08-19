@@ -144,10 +144,10 @@ class NewAuthorControllerTest {
                         .contentType(APPLICATION_JSON)
                         .content(toJson(request))
                         .header(HttpHeaders.ACCEPT_LANGUAGE, "en"))
-                .andExpect(status().isBadRequest())
+                .andExpect(status().isUnprocessableEntity())
                 .andExpect(header().string(HttpHeaders.CONTENT_TYPE, is(MediaTypes.PROBLEM_VALUE)))
-                .andExpect(jsonPath("$.title", is("Bad Request")))
-                .andExpect(jsonPath("$.status", is(400)))
+                .andExpect(jsonPath("$.title", is("Unprocessable Entity")))
+                .andExpect(jsonPath("$.status", is(422)))
                 .andExpect(jsonPath("$.detail", is("author is underage")))
         ;
 
