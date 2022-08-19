@@ -148,7 +148,7 @@ class NewAuthorControllerTest {
                 .andExpect(header().string(HttpHeaders.CONTENT_TYPE, is(MediaTypes.PROBLEM_VALUE)))
                 .andExpect(jsonPath("$.title", is("Bad Request")))
                 .andExpect(jsonPath("$.status", is(400)))
-                .andExpect(jsonPath("$.detail", containsString("author is underage")))
+                .andExpect(jsonPath("$.detail", is("author is underage")))
         ;
 
         // validation

@@ -9,12 +9,21 @@ import org.zalando.problem.spring.web.advice.ProblemHandling;
 import java.net.URI;
 
 /**
- * Prints a better detail message
- * TODO: https://github.com/zalando/problem-spring-web#stack-traces-and-causal-chains
+ * Default application exception handler. This handler is based on Zalando Problem Library, which
+ * follows the RFC7807 Problem.
+ *
+ * If you need to customize any kind of error/exception, you can read the documentation here:
+ * https://github.com/zalando/problem-spring-web#customization
+ *
+ * TODO:
+ *  - https://github.com/zalando/problem-spring-web#stack-traces-and-causal-chains
  */
 @ControllerAdvice
 public class GlobalExceptionHandler implements ProblemHandling {
 
+    /**
+     * Prints a better detail message when catching a <code>ResponseStatusException</code>
+     */
     @Override
     public ProblemBuilder prepare(Throwable throwable, StatusType status, URI type) {
         ProblemBuilder builder = ProblemHandling.super.prepare(throwable, status, type);
