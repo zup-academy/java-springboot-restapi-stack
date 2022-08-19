@@ -13,7 +13,7 @@ import java.net.URI;
  * TODO: https://github.com/zalando/problem-spring-web#stack-traces-and-causal-chains
  */
 @ControllerAdvice
-public class ResponseStatusExceptionHandler implements ProblemHandling {
+public class GlobalExceptionHandler implements ProblemHandling {
 
     @Override
     public ProblemBuilder prepare(Throwable throwable, StatusType status, URI type) {
