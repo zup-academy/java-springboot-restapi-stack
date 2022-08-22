@@ -33,10 +33,15 @@ stk list stack | grep java-springboot
 stk create app <app_name> -t java-springboot-restapi-stack/default-template
 ```
 
-4. Execute the application:
+4. Import the application as Maven project into your IDE and start coding
+
+4. Now it's time to run the application. Inside its directory, build and run it:
 ```sh
-stk create app <app_name> -t java-springboot-restapi-stack/default-template
+./mvnw clean install
+./mvnw spring-boot:run
 ```
+
+Nice! You're ready for production I guess 🥳
 
 ## Support
 
