@@ -1,6 +1,6 @@
-## Java and Spring Boot REST API Stack (`java-springboot-restapi-stack`)
+## Java and Spring Boot REST API Stack
 
-Stack for bulding a REST API application with Java and Spring Boot.
+The **java-springboot-restapi-stack** is a stack for bulding a REST API application with Java and Spring Boot following some best practices.
 
 The default template of this stack uses those technologies:
 
@@ -33,11 +33,10 @@ stk list stack | grep java-springboot
 stk create app <app_name> -t java-springboot-restapi-stack/default-template
 ```
 
-4. Import the application as Maven project into your IDE and start coding
+4. Import the application as a Maven project into your IDE and start coding;
 
-4. Now it's time to run the application. Inside its directory, build and run it:
+5. Now it's time to run the application. Inside its directory, build and run it:
 ```sh
-./mvnw clean install
 ./mvnw spring-boot:run
 ```
 
