@@ -1,6 +1,6 @@
 ## Java and Spring Boot REST API Stack
 
-The **java-springboot-restapi-stack** is a stack for bulding a REST API application with Java and Spring Boot following some best practices.
+The **java-springboot-restapi-stack** is a stack for bulding REST API applications with Java and Spring Boot following some best practices.
 
 The default template of this stack uses those technologies:
 
