@@ -23,4 +23,7 @@ Também é possível expandir as capacidades do template ao utilizar os Plugins 
 
 ### Plugins
 
+- Spring Data JPA Plugin
+- Spring Security Oauth2 Resource Server
+
 
