@@ -3,7 +3,7 @@ Stack Java Spring Boot REST API é um conjunto de ferramentas, metologias, prát
 
 ## Estrutura da Stack
 
-A Stack Java Spring Boot REST API é voltada para construção de Web Services utilizando Java e Spring como principais técnologias. O template possibilita a construção de projetos com as tecnologias abaixo. 
+A Stack Java Spring Boot REST API é voltada para construção de Web Services utilizando Java e Spring como principais técnologias. O template possibilita a construção de projetos com as tecnologias abaixo.
 
 - Java 17
 - Spring Boot
@@ -14,7 +14,7 @@ A Stack Java Spring Boot REST API é voltada para construção de Web Services u
 - Spring Validation com Bean Validation
 - Spring Test com JUnit5 e JsonPath
 
-A Stack oferece através do template um projeto inicial estruturado com as técnologias acima, junto a um conjuto de exemplos seguindos as boas praticas de  como Codificar, Documentar e Testar suas APIs.
+A Stack oferece através do template base um projeto inicial estruturado com as técnologias acima, junto a um conjuto de exemplos seguindos as boas praticas de  como Codificar, Documentar e Testar suas APIs.
 
 Ao criar um projeto utilizando **_Stack Java Spring Boot REST API_**, seu projeto é iniciado com as capacidades essênciais para publicação na Web como APIs para verificação de HealthCheck, incluindo `liveness` e `readiness` para Kubernets; Documentação seguindo a especificação **OpenAPI**; Exception Handler baseado na **RFC 7807 Problem Details**; Exemplos de Controllers e testes para os mesmos.
 
@@ -24,6 +24,6 @@ Também é possível expandir as capacidades do template ao utilizar os Plugins 
 ### Plugins
 
 - Spring Data JPA Plugin
-- Spring Security Oauth2 Resource Server
+- Spring Security Oauth2 Resource Server Plugin
 
 

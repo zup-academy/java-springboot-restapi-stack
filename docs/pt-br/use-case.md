@@ -1,36 +1,63 @@
-# Caso de Uso
 
-Stack Java Spring Boot REST API é um conjunto de ferramentas, metologias, práticas e conceitos que juntos oferecem através de um template um ponto de partida para construção de Soluções Web utilizando Java.
+*_Stack Java Spring Boot REST API_* oferece diversos códigos para auxiliar os times de desenvolvimento a construir APIs REST e expor as mesmas através de seu template e seus plugins.
 
-## Técnologias
+## Pré-requisitos
 
-- Java 17
-- Spring Boot
-- Spring Web
-- Spring Actuator
-- Spring OpenAPI
-- Zalando Problem Details Web
-- Spring Validation com Bean Validation
-- Spring Test com JUNit5 e JsonPath
+Para fazer bom uso da Stack é necessário os seguintes conhecimentos:
 
-## Quando devo utilizar **_Stack Java Spring Boot REST API_**?
-
-Sempre que desejar iniciar a construção de um projeto no modelo arquitetural REST utilizando a Linguagem Java e Spring Boot.
-
-### O que é ganho ao utilizar a Stack?
-
-A principal vantagem ao utilizar a **_Stack Java Spring Boot REST API_** é que parte do tempo que era gasto em transformar sugestões e configurações dadas na documentação do seu framework em codigo será reduzido. Nós identificamos quais são as melhores configurações para diversos aspectos e as oferecemos juntos com exemplos de utilização.
-
-Ao criar seu projeto a partir da Stack vc ganha:
-
-- Samples de Controllers seguindos boas práticas de REST;
-- Samples de Testes de Integração para os Controllers;
-- Samples de Validações utilizando Bean Validation;
-- Dockerfile para criação da imagem da aplicação para uso em orquestradores de sistemas com Kubernets;
-- Samples de Documentação via OpenAPI programaticamente;
-- API para realizar consultas de HealthCheck;
-- API configurada para exposição de metricas `liveness` e `readiness` para Kubernets;
-- Exception Handler baseado na RFC 7807 Problems Details;
+- Ser capaz de entender sobre a linguagem de programação Java
+- Ser capaz de entender o paradigma Orientado a Objetos
+- Ser capaz de enteder o padrão arquietural REST
+- Ser capaz de entender o protocolo HTTP 
+- Ser capaz de entender sobre Controllers com Spring MVC
+- Ser capaz de entender sobre validações com Bean Validation
+- Ser capaz de entender sobre Testes de Unidade e Integração com Spring Test (Spring Test Context, JUnit, JsonPath)
 
 
+## Capacidades da Stack
 
+Ao utilizar a **_Stack Java Spring Boot REST API_** você será capaz de construir projetos capazes de expor uma API REST na Web, habilitar logs, metric, expor documentação baseado em OpenAPI Specification, expor API de HealthCheck;
+
+### Template Base
+
+- **Validações** 
+
+    Crie validações em suas classes com Spring Validation e Bean Validation.
+
+- Logging
+
+    Loggue as operações com _SLF4J_.
+
+- Docker Image
+
+    Construa a imagem de seus sistema para realizar deploy em sistemas de orquestração de containers como Kubernets.
+
+- HealthCheck
+
+    Verifique a saude de sua aplicação através das APIs de HealthCheck.
+
+- Testes Unitarios
+
+  Construa testes de unidade em seu sistema com apoio de JUnit 5. 
+
+- Testes Integrados
+    
+    Construa testes de integração para validar componentes complexos com apoio Spring Test.
+
+- Documentação OpenAPI
+    
+    Documente suas APIs de forma programatica através de Spring OpenAPI.
+
+- Error Handler
+
+    Responda pradronizada os casos de erro em sua API REST.
+
+### Plugins
+
+- Spring Data JPA
+
+   Faça melhor uso dos recursos de persistência em RDBMS com Spring Data, Hibernate e Hikari.   
+
+- Spring Security Oauth2 Resource Server
+
+  Faça da sua aplicação um Resource Server e se connecte a um Authorization Server como KeyCloack
