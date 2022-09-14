@@ -20,7 +20,7 @@ Ao utilizar a **_Stack Java Spring Boot REST API_** você será capaz de constru
 
 ### Template Base
 
-- **Validações** 
+- Validações 
 
     Crie validações em suas classes com Spring Validation e Bean Validation.
 
@@ -54,7 +54,7 @@ Ao utilizar a **_Stack Java Spring Boot REST API_** você será capaz de constru
 
 ### Plugins
 
-- Spring Data JPA
+- [Spring Data JPA](https://github.com/zup-academy/java-spring-data-jpa-plugin/tree/main)
 
    Faça melhor uso dos recursos de persistência em RDBMS com Spring Data, Hibernate e Hikari.   
 
