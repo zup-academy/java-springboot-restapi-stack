@@ -5,13 +5,5 @@ template: java-springboot-restapi-stack/default-template
 # list of plugins to be applied after project creation
 plugins:
   - plugin: java-springboot-restapi-stack/java-spring-data-jpa-plugin
-    inputs:
-      - label: Choose one database (RDBMS)
-        name: database_name
-        type: text
-        items:
-          - H2
-          - PostgreSQL
-          - MySQL
   - plugin: java-springboot-restapi-stack/java-spring-security-oauth2-resourceserver-plugin   
   - plugin: java-springboot-restapi-stack/java-spring-open-feign-plugin   
