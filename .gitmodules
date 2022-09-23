@@ -4,3 +4,6 @@
 [submodule "java-spring-security-oauth2-resourceserver-plugin"]
 	path = java-spring-security-oauth2-resourceserver-plugin
 	url = https://github.com/zup-academy/java-spring-security-oauth2-resourceserver-plugin
+[submodule "java-spring-open-feign-plugin"]
+	path = java-spring-open-feign-plugin
+	url = https://github.com/zup-academy/java-spring-open-feign-plugin
