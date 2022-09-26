@@ -29,3 +29,4 @@ inputs:
 computedInputs:
   "project_base_package": "{{project_group_id}}.{{project_artifact_id}}"
   "project_folder": "{{computed_inputs.project_base_package | replace('.', '/')}}"
+  "project_name_capitalized": "{{project_name | capitalize}}"

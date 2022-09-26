@@ -23,7 +23,8 @@ Também é possível expandir as capacidades do template ao utilizar os Plugins 
 
 ### Plugins
 
-- Spring Data JPA Plugin
-- Spring Security Oauth2 Resource Server Plugin
+- [Spring Data JPA Plugin](https://github.com/zup-academy/java-spring-data-jpa-plugin)
+- [Spring Security Oauth2 Resource Server Plugin](https://github.com/zup-academy/java-spring-security-oauth2-resourceserver-plugin)
+- [Spring Open Feign Plugin](https://github.com/zup-academy/java-spring-open-feign-plugin)
 
 

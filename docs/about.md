@@ -23,3 +23,4 @@ It is also possible to expand the capabilities of the template by using Plugins 
 
 - SpringData JPA Plugin
 - Spring Security Oauth2 Resource Server Plugin
+- Spring Open Feign Plugin
