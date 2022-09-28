@@ -42,6 +42,24 @@ stk create app <app_name> -t java-springboot-restapi-stack/default-template
 
 Nice! You're ready for production I guess 🥳
 
+
+## Extending your project's capabilities
+
+If you want to enable the use of technologies to access Relational Database, Security through Oauth2 with Keycloack and create HTTP clients, you can use the following Plugins:
+
+* [Java Spring Data JPA Plugin](https://github.com/zup-academy/java-spring-data-jpa-plugin): Enable the use of key persistence-related technologies for relational databases for high performance.
+
+* [Java Spring Security OAuth2 Resource Server Plugin](https://github.com/zup-academy/java-spring-security-oauth2-resourceserver-plugin): Enable authentication and authorization capability with Spring Security OAuth2 Resource Server.
+
+* [Java Spring Open Feign Plugin](https://github.com/zup-academy/java-spring-security-oauth2-resourceserver-plugin): Build HTTP Clients declaratively with Spring Cloud Open Feign.
+
+
+### Create your project with all these capabilities through StackFile Default
+
+```sh
+stk create application <app_name> --stackfile java-springboot-restapi-stack/default
+```
+
 ## Support
 
 If you need any help, please open an [issue on Stack's Github repository](https://github.com/zup-academy/java-springboot-restapi-stack/issues). 
