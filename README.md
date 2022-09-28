@@ -42,6 +42,9 @@ stk create app <app_name> -t java-springboot-restapi-stack/default-template
 
 Nice! You're ready for production I guess 🥳
 
+[See here the benefits and how to use the Java Spring Boot REST API Stack template](https://www.youtube.com/watch?v=IC1J9VkUiwQ)
+
+
 
 ## Extending your project's capabilities with Plugins
 
