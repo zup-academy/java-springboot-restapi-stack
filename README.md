@@ -43,7 +43,7 @@ stk create app <app_name> -t java-springboot-restapi-stack/default-template
 Nice! You're ready for production I guess 🥳
 
 
-## Extending your project's capabilities
+## Extending your project's capabilities with Plugins
 
 If you want to enable the use of technologies to access Relational Database, Security through Oauth2 with Keycloack and create HTTP clients, you can use the following Plugins:
 
@@ -54,7 +54,9 @@ If you want to enable the use of technologies to access Relational Database, Sec
 * [Java Spring Open Feign Plugin](https://github.com/zup-academy/java-spring-security-oauth2-resourceserver-plugin): Build HTTP Clients declaratively with Spring Cloud Open Feign.
 
 
-### Create your project with all these capabilities through StackFile Default
+### Create your project with ALL these capabilities through our StackFile Default
+
+You can create a new application using all these plugins through one single command:
 
 ```sh
 stk create application <app_name> --stackfile java-springboot-restapi-stack/default
