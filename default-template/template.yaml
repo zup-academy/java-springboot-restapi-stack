@@ -29,4 +29,9 @@ inputs:
 computedInputs:
   "project_base_package": "{{project_group_id}}.{{project_artifact_id}}"
   "project_folder": "{{computed_inputs.project_base_package | replace('.', '/')}}"
-  "project_name_capitalized": "{{project_name | capitalize}}"
+  "project_name_capitalized": "{{project_name | regex_replace('[^0-9a-zA-Z]','') | capitalize}}"
+
+hooks:
+  - type: run-script
+    trigger: before-input
+    script: snippet/regex_replace.py
