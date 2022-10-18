@@ -7,3 +7,6 @@
 [submodule "java-spring-open-feign-plugin"]
 	path = java-spring-open-feign-plugin
 	url = https://github.com/zup-academy/java-spring-open-feign-plugin
+[submodule "java-spring-aws-sqs-plugin"]
+	path = java-spring-aws-sqs-plugin
+	url = https://github.com/zup-academy/java-spring-aws-sqs-plugin
