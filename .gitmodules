@@ -13,3 +13,6 @@
 [submodule "java-spring-kafka-plugin"]
 	path = java-spring-kafka-plugin
 	url = https://github.com/zup-academy/java-spring-kafka-plugin
+[submodule "java-spring-aws-sns-plugin"]
+	path = java-spring-aws-sns-plugin
+	url = https://github.com/zup-academy/java-spring-aws-sns-plugin
