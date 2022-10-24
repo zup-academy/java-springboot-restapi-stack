@@ -21,6 +21,10 @@ It is also possible to expand the capabilities of the template by using Plugins 
 
 ### Plugins
 
-- SpringData JPA Plugin
-- Spring Security Oauth2 Resource Server Plugin
-- Spring Open Feign Plugin
+- Java Spring Data JPA Plugin
+- Java Spring Security Oauth2 Resource Server Plugin
+- Java Spring Open Feign Plugin
+- Java Spring Kafka Plugin
+- Java Spring AWS SQS Plugin
+- Java Spring AWS SNS Plugin
+- Java Spring AWS S3 Plugin
