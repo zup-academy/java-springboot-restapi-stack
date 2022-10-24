@@ -56,6 +56,14 @@ If you want to enable the use of technologies to access Relational Database, Sec
 
 * [Java Spring Open Feign Plugin](https://github.com/zup-academy/java-spring-security-oauth2-resourceserver-plugin): Build HTTP Clients declaratively with Spring Cloud Open Feign.
 
+* [Java Spring Kafka Plugin](https://github.com/zup-academy/java-spring-kafka-plugin/): Enable the ability to use Apache Kafka in your Spring Boot Application.
+
+* [Java Spring AWS SQS Plugin](https://github.com/zup-academy/java-spring-aws-sqs-plugin): Enables the ability to use AWS SQS in your Spring Boot Application.
+
+* [Java Spring AWS SNS Plugin](https://github.com/zup-academy/java-spring-aws-sns-plugin/): Enables the ability to use AWS SNS in your Spring Boot Application.
+
+* [Java Spring AWS S3 Plugin](https://github.com/zup-academy/java-spring-aws-s3-plugin): Enables the ability to use AWS S3 in your Spring Boot Application.
+
 
 ### Create your project with ALL these capabilities through our StackFile Default
 
