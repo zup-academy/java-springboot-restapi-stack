@@ -26,5 +26,9 @@ Também é possível expandir as capacidades do template ao utilizar os Plugins 
 - [Spring Data JPA Plugin](https://github.com/zup-academy/java-spring-data-jpa-plugin)
 - [Spring Security Oauth2 Resource Server Plugin](https://github.com/zup-academy/java-spring-security-oauth2-resourceserver-plugin)
 - [Spring Open Feign Plugin](https://github.com/zup-academy/java-spring-open-feign-plugin)
+- [Java Spring Kafka Plugin](https://github.com/zup-academy/java-spring-kafka-plugin/)
+- [Java Spring AWS SQS Plugin](https://github.com/zup-academy/java-spring-aws-sqs-plugin)
+- [Java Spring AWS SNS Plugin](https://github.com/zup-academy/java-spring-aws-sns-plugin/)
+- [Java Spring AWS S3 Plugin](https://github.com/zup-academy/java-spring-aws-s3-plugin)
 
 
