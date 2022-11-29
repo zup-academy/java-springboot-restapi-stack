@@ -10,7 +10,7 @@ technologies: # Ref: https://docs.stackspot.com/latest/docs/creators-guide/yaml/
   - docker
   - rest
   - springboot 
-about: docs/about.md
+about: docs/pt-br/about.md
 use-cases:
   - title: Use Case Title
     content: docs/use-case.md
