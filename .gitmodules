@@ -25,3 +25,6 @@
 [submodule "java-spring-aws-dynamodb-plugin"]
 	path = java-spring-aws-dynamodb-plugin
 	url = https://github.com/zup-academy/java-spring-aws-dynamodb-plugin
+[submodule "stk-adr-app-doc-plugin"]
+	path = stk-adr-app-doc-plugin
+	url = https://github.com/deusemarjunior/stk-adr-app-doc-plugin.git
