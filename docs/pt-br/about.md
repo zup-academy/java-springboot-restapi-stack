@@ -134,7 +134,7 @@ Habilite a capacidade de criar e testar publishers e subscribes através da API 
 
 Habilite a capacidade de criar producers e consumers através das APIs Spring Cloud AWS Messaging junto ao AWS SQS.
 
-[Veja como Java Spring AWS SQS Plugin pode auxiliar a dinamica de uso do Amazon SQS em seu projeto](https://www.youtube.com/watch?v=mBLcN2dr6Ys&list=PLV3Gf3Ojibfw-APcal7p2HgdhVJNCRk0T&index=37)
+[Veja como Java Spring AWS SQS Plugin pode auxiliar a dinamica de uso do Amazon SQS em seu projeto](https://youtu.be/mBLcN2dr6Ys)
 
 [Acesse aqui o repositorio oficial do plugin!](https://github.com/zup-academy/java-spring-aws-sqs-plugin)
 
@@ -150,7 +150,7 @@ Habilite a capacidade de enviar notificações  APIs Spring Cloud AWS Messaging 
 
 Habilite a capacidade de utilizar Amazon S3 como Storage através das APIs da Spring Cloud AWS Core junto ao AWS S3
 
-[Veja como Java Spring AWS S3 Plugin pode auxiliar a dinamica de uso do Amazon S3 em seu projeto](https://www.youtube.com/watch?v=mIp44nnWVpo&list=PLV3Gf3Ojibfw-APcal7p2HgdhVJNCRk0T&index=36)
+[Veja como Java Spring AWS S3 Plugin pode auxiliar a dinamica de uso do Amazon S3 em seu projeto](https://youtu.be/mIp44nnWVpo)
 
 [Acesse aqui o repositorio oficial do plugin!](https://github.com/zup-academy/java-spring-aws-s3-plugin)
 
@@ -158,7 +158,7 @@ Habilite a capacidade de utilizar Amazon S3 como Storage através das APIs da Sp
 
 Habilite a capacidade de utilizar Amazon DynamoDb junto aos beneficios do projeto Spring Data
 
-[Veja como Java Spring AWS DynamoDB Plugin pode auxiliar a dinamica de uso do Amazon DynamoDB em seu projeto](https://www.youtube.com/watch?v=azGk4QYM_iQ&list=PLV3Gf3Ojibfw-APcal7p2HgdhVJNCRk0T&index=39)
+[Veja como Java Spring AWS DynamoDB Plugin pode auxiliar a dinamica de uso do Amazon DynamoDB em seu projeto](https://youtu.be/azGk4QYM_iQ)
 
 
 [Acesse aqui o repositorio oficial do plugin!](https://github.com/zup-academy/java-spring-aws-dynamodb-plugin)
