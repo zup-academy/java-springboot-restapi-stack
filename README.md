@@ -1,6 +1,6 @@
 ## Java and Spring Boot REST API Stack
 
-The **java-springboot-restapi-stack** is a stack for bulding REST API applications with Java and Spring Boot following some best practices.
+The **java-springboot-restapi-stack** is a stack for building REST API applications with Java and Spring Boot following some best practices.
 
 The default template of this stack uses those technologies:
 
@@ -12,7 +12,7 @@ The default template of this stack uses those technologies:
 - Spring Testing and jUnit 5
 - Bean Validation
 
-If you need more features you can apply as many plugins as you want.
+If you need more features, you can apply as many plugins as you want.
 
 ## How to use
 
@@ -58,12 +58,15 @@ If you want to enable the use of technologies to access Relational Database, Sec
 
 * [Java Spring Kafka Plugin](https://github.com/zup-academy/java-spring-kafka-plugin/): Enable the ability to use Apache Kafka in your Spring Boot Application.
 
-* [Java Spring AWS SQS Plugin](https://github.com/zup-academy/java-spring-aws-sqs-plugin): Enables the ability to use AWS SQS in your Spring Boot Application.
+* [Java Spring AWS SQS Plugin](https://github.com/zup-academy/java-spring-aws-sqs-plugin): Enable the ability to use AWS SQS in your Spring Boot Application.
 
-* [Java Spring AWS SNS Plugin](https://github.com/zup-academy/java-spring-aws-sns-plugin/): Enables the ability to use AWS SNS in your Spring Boot Application.
+* [Java Spring AWS SNS Plugin](https://github.com/zup-academy/java-spring-aws-sns-plugin/): Enable the ability to use AWS SNS in your Spring Boot Application.
 
-* [Java Spring AWS S3 Plugin](https://github.com/zup-academy/java-spring-aws-s3-plugin): Enables the ability to use AWS S3 in your Spring Boot Application.
+* [Java Spring AWS S3 Plugin](https://github.com/zup-academy/java-spring-aws-s3-plugin): Enable the ability to use AWS S3 in your Spring Boot Application.
 
+* [Java Spring Data DynamoDB Plugin](https://github.com/zup-academy/java-spring-aws-dynamodb-plugin): Enable the ability to use AWS DynanmoDB in your Spring Boot Application.
+
+* [Java Spring Cache Redis Plugin](https://github.com/zup-academy/java-spring-cache-redis-plugin): Enable the ability to use Distributed Cache with Redis in your Spring Boot Application.
 
 ### Create your project with ALL these capabilities through our StackFile Default
 
